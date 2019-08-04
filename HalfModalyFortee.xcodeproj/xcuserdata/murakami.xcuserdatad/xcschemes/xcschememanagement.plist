@@ -3,11 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
+	<dict/>
+	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>HalfModalyFortee.xcscheme_^#shared#^_</key>
+		<key>29A74ECF22F7381A00D338DD</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>14</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29A74EE322F7381B00D338DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29A74EEE22F7381B00D338DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
