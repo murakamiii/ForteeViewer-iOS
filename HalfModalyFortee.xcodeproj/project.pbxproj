@@ -15,7 +15,6 @@
 		29A74EE922F7381B00D338DD /* HalfModalyForteeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A74EE822F7381B00D338DD /* HalfModalyForteeTests.swift */; };
 		29A74EF422F7381B00D338DD /* HalfModalyForteeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A74EF322F7381B00D338DD /* HalfModalyForteeUITests.swift */; };
 		29A74F0322F747B400D338DD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29A74F0222F747B400D338DD /* MainViewController.xib */; };
-		6F5BE8F43C0D177830C1BFCF /* Pods_HalfModalyForteeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5D2EC831CD220D4F7FC5DA /* Pods_HalfModalyForteeUITests.framework */; };
 		E07027E3FAC4EADE2746AE0C /* Pods_HalfModalyFortee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B1966DB2DDA67A137CAA43 /* Pods_HalfModalyFortee.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		16CF5931D8B5EDE3A599CF1B /* Pods-HalfModalyFortee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyFortee.debug.xcconfig"; path = "Target Support Files/Pods-HalfModalyFortee/Pods-HalfModalyFortee.debug.xcconfig"; sourceTree = "<group>"; };
 		229942DB78E75D29DD392BDE /* Pods-HalfModalyFortee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyFortee.release.xcconfig"; path = "Target Support Files/Pods-HalfModalyFortee/Pods-HalfModalyFortee.release.xcconfig"; sourceTree = "<group>"; };
-		27FB3458B714C1FB2BDE2CA1 /* Pods-HalfModalyForteeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyForteeUITests.debug.xcconfig"; path = "Target Support Files/Pods-HalfModalyForteeUITests/Pods-HalfModalyForteeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		280995817328E069C2693776 /* Pods-HalfModalyForteeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyForteeTests.release.xcconfig"; path = "Target Support Files/Pods-HalfModalyForteeTests/Pods-HalfModalyForteeTests.release.xcconfig"; sourceTree = "<group>"; };
 		29A74ED022F7381A00D338DD /* HalfModalyFortee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalfModalyFortee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A74ED322F7381A00D338DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,8 +55,6 @@
 		70495CE92919EFB3ED02C59E /* Pods-HalfModalyForteeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyForteeTests.debug.xcconfig"; path = "Target Support Files/Pods-HalfModalyForteeTests/Pods-HalfModalyForteeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7DDAC8C5A9E1A7A1AA2AD6B0 /* Pods_HalfModalyForteeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HalfModalyForteeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B1966DB2DDA67A137CAA43 /* Pods_HalfModalyFortee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HalfModalyFortee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE5D2EC831CD220D4F7FC5DA /* Pods_HalfModalyForteeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HalfModalyForteeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4AAF3932D4E26B94448B168 /* Pods-HalfModalyForteeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyForteeUITests.release.xcconfig"; path = "Target Support Files/Pods-HalfModalyForteeUITests/Pods-HalfModalyForteeUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F5BE8F43C0D177830C1BFCF /* Pods_HalfModalyForteeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,8 +152,6 @@
 				229942DB78E75D29DD392BDE /* Pods-HalfModalyFortee.release.xcconfig */,
 				70495CE92919EFB3ED02C59E /* Pods-HalfModalyForteeTests.debug.xcconfig */,
 				280995817328E069C2693776 /* Pods-HalfModalyForteeTests.release.xcconfig */,
-				27FB3458B714C1FB2BDE2CA1 /* Pods-HalfModalyForteeUITests.debug.xcconfig */,
-				E4AAF3932D4E26B94448B168 /* Pods-HalfModalyForteeUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -168,7 +161,6 @@
 			children = (
 				B0B1966DB2DDA67A137CAA43 /* Pods_HalfModalyFortee.framework */,
 				7DDAC8C5A9E1A7A1AA2AD6B0 /* Pods_HalfModalyForteeTests.framework */,
-				BE5D2EC831CD220D4F7FC5DA /* Pods_HalfModalyForteeUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -219,7 +211,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29A74EFE22F7381B00D338DD /* Build configuration list for PBXNativeTarget "HalfModalyForteeUITests" */;
 			buildPhases = (
-				7170E6EBF3369499730024EB /* [CP] Check Pods Manifest.lock */,
 				29A74EEB22F7381B00D338DD /* Sources */,
 				29A74EEC22F7381B00D338DD /* Frameworks */,
 				29A74EED22F7381B00D338DD /* Resources */,
@@ -360,28 +351,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HalfModalyFortee/Pods-HalfModalyFortee-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7170E6EBF3369499730024EB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HalfModalyForteeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D422DE5D539185A29522344D /* [CP] Check Pods Manifest.lock */ = {
@@ -663,7 +632,6 @@
 		};
 		29A74EFF22F7381B00D338DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27FB3458B714C1FB2BDE2CA1 /* Pods-HalfModalyForteeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -684,7 +652,6 @@
 		};
 		29A74F0022F7381B00D338DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4AAF3932D4E26B94448B168 /* Pods-HalfModalyForteeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

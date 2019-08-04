@@ -20,9 +20,9 @@ target 'HalfModalyFortee' do
     # Pods for testing
   end
 
-  target 'HalfModalyForteeUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+#  target 'HalfModalyForteeUITests' do
+#    inherit! :search_paths
+#    # Pods for testing
+#  end
 
 end
