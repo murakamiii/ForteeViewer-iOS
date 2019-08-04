@@ -1,0 +1,54 @@
+name: Alamofire, nameSpecified: 
+body: Copyright (c) 2014-2…
+version: 
+
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 2.5.0
+
+name: Nuke, nameSpecified: 
+body: The MIT License (MIT…
+version: 8.0.1
+
+name: R.swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 
+
+name: R.swift.Library, nameSpecified: 
+body: The MIT License (MIT…
+version: 
+
+name: ReachabilitySwift, nameSpecified: 
+body: Copyright (c) 2016 A…
+version: 
+
+name: RxCocoa, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.0
+
+name: RxRelay, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.0
+
+name: RxSwift, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.0
+
+name: SVProgressHUD, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 2.2.5
+
+name: SwiftDate, nameSpecified: 
+body: The MIT License (MIT…
+version: 6.0.3
+
+add-version-numbers: false
+
+LicensePlist Version: 1.8.3
