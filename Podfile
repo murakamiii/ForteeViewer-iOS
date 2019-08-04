@@ -13,7 +13,8 @@ target 'HalfModalyFortee' do
   pod 'ReachabilitySwift', '5.0.0-beta1'
   pod 'Nuke', '~> 8.0'
   pod 'LicensePlist'  
-
+  pod 'SVProgressHUD', '~> 2.2'
+  
   target 'HalfModalyForteeTests' do
     inherit! :search_paths
     # Pods for testing

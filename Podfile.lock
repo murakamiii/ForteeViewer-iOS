@@ -12,6 +12,7 @@ PODS:
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
+  - SVProgressHUD (2.2.5)
   - SwiftDate (6.0.3)
 
 DEPENDENCIES:
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - ReachabilitySwift (= 5.0.0-beta1)
   - RxCocoa (~> 5.0)
   - RxSwift (~> 5.0)
+  - SVProgressHUD (~> 2.2)
   - SwiftDate (~> 6.0)
 
 SPEC REPOS:
@@ -35,6 +37,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SVProgressHUD
     - SwiftDate
 
 SPEC CHECKSUMS:
@@ -47,8 +50,9 @@ SPEC CHECKSUMS:
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftDate: 8d4f14bf1ef68e95094511504856547bf9e3e1a6
 
-PODFILE CHECKSUM: ae26eb3a93a7f55a8a5b77263076a6d2b185d266
+PODFILE CHECKSUM: 21256ccccb270f9b31e088b22b1304a74e51c455
 
 COCOAPODS: 1.7.5
