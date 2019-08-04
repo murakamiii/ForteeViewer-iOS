@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (5.0.0-beta.7)
+  - LicensePlist (2.5.0)
+  - Nuke (8.0.1)
+  - R.swift (5.1.0.alpha.4):
+    - R.swift.Library (~> 5.1.0.alpha.1)
+  - R.swift.Library (5.1.0.alpha.1)
+  - ReachabilitySwift (5.0.0-beta1)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SwiftDate (6.0.3)
+
+DEPENDENCIES:
+  - Alamofire (= 5.0.0-beta.7)
+  - LicensePlist
+  - Nuke (~> 8.0)
+  - R.swift (= 5.1.0.alpha.4)
+  - ReachabilitySwift (= 5.0.0-beta1)
+  - RxCocoa (~> 5.0)
+  - RxSwift (~> 5.0)
+  - SwiftDate (~> 6.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - LicensePlist
+    - Nuke
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftDate
+
+SPEC CHECKSUMS:
+  Alamofire: bd07938ceecad59d2492aeecb1f785a8f2721160
+  LicensePlist: e5f8f2e3465620e53ec4c669955a5a7d0692b9cb
+  Nuke: e6a65472f59c1bfe779cb495760951f0121ef7c0
+  R.swift: 28fd04ea6eef3e5f494c963e367e4704293036c7
+  R.swift.Library: 0f4db7a78b63952de8c1cf017b5013e9ba072133
+  ReachabilitySwift: 93a5956ef3f076d7e24bc65bfb1c5042e69b7276
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SwiftDate: 8d4f14bf1ef68e95094511504856547bf9e3e1a6
+
+PODFILE CHECKSUM: ae26eb3a93a7f55a8a5b77263076a6d2b185d266
+
+COCOAPODS: 1.7.5
