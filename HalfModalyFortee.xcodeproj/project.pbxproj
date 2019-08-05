@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		051C997AE01F8410753F32A4 /* Pods_HalfModalyForteeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDAC8C5A9E1A7A1AA2AD6B0 /* Pods_HalfModalyForteeTests.framework */; };
+		290AC35222F7DFFA00562C46 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290AC35122F7DFFA00562C46 /* ContentCell.xib */; };
+		290AC35422F7E2F600562C46 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35322F7E2F600562C46 /* ContentCell.swift */; };
 		29A74ED422F7381A00D338DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A74ED322F7381A00D338DD /* AppDelegate.swift */; };
 		29A74ED622F7381A00D338DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A74ED522F7381A00D338DD /* MainViewController.swift */; };
 		29A74EDB22F7381B00D338DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A74EDA22F7381B00D338DD /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		16CF5931D8B5EDE3A599CF1B /* Pods-HalfModalyFortee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyFortee.debug.xcconfig"; path = "Target Support Files/Pods-HalfModalyFortee/Pods-HalfModalyFortee.debug.xcconfig"; sourceTree = "<group>"; };
 		229942DB78E75D29DD392BDE /* Pods-HalfModalyFortee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyFortee.release.xcconfig"; path = "Target Support Files/Pods-HalfModalyFortee/Pods-HalfModalyFortee.release.xcconfig"; sourceTree = "<group>"; };
 		280995817328E069C2693776 /* Pods-HalfModalyForteeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyForteeTests.release.xcconfig"; path = "Target Support Files/Pods-HalfModalyForteeTests/Pods-HalfModalyForteeTests.release.xcconfig"; sourceTree = "<group>"; };
+		290AC35122F7DFFA00562C46 /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
+		290AC35322F7E2F600562C46 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		29A74ED022F7381A00D338DD /* HalfModalyFortee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalfModalyFortee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A74ED322F7381A00D338DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A74ED522F7381A00D338DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 			children = (
 				29A74ED522F7381A00D338DD /* MainViewController.swift */,
 				29A74F0222F747B400D338DD /* MainViewController.xib */,
+				290AC35122F7DFFA00562C46 /* ContentCell.xib */,
+				290AC35322F7E2F600562C46 /* ContentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 				29A74EDE22F7381B00D338DD /* LaunchScreen.storyboard in Resources */,
 				29A74F0322F747B400D338DD /* MainViewController.xib in Resources */,
 				29A74EDB22F7381B00D338DD /* Assets.xcassets in Resources */,
+				290AC35222F7DFFA00562C46 /* ContentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290AC35422F7E2F600562C46 /* ContentCell.swift in Sources */,
 				29A74ED622F7381A00D338DD /* MainViewController.swift in Sources */,
 				29A74ED422F7381A00D338DD /* AppDelegate.swift in Sources */,
 			);
