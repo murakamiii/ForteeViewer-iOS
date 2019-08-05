@@ -14,7 +14,8 @@ target 'HalfModalyFortee' do
   pod 'Nuke', '~> 8.0'
   pod 'LicensePlist'  
   pod 'SVProgressHUD', '~> 2.2'
-  
+  pod 'SwiftLint'
+ 
   target 'HalfModalyForteeTests' do
     inherit! :search_paths
     # Pods for testing
