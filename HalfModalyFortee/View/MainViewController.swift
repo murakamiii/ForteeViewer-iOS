@@ -9,8 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
-import Alamofire
-import Rswift
+import Nuke
 
 class MainViewController: UIViewController {
     @IBOutlet private weak var timeTableView: UITableView!
@@ -22,13 +21,11 @@ class MainViewController: UIViewController {
     
     func setUpUI() {
         let nib = UINib(nibName: "ContentCell", bundle: nil)
-        timeTableView.register(nib,
-                               forCellReuseIdentifier: "ContentCell")
-        let vm = MainViewModel()
+        timeTableView.register(nib, forCellReuseIdentifier: "ContentCell")
         
-        vm.timetableResponse.bind(to: timeTableView.rx.items(cellIdentifier: "ContentCell")) { _, content, cell in
-            cell.textLabel?.text = content.title
-            cell.detailTextLabel?.text = content.speaker?.name
+        let vm = MainViewModel()
+        vm.timetableResponse.bind(to: timeTableView.rx.items(cellIdentifier: "ContentCell", cellType: ContentCell.self)) { _, content, cell in
+            cell.set(content: content)
         }.disposed(by: disposeBag)
         
         vm.errorResponse.subscribe(onNext: { (_: Error) in
@@ -43,6 +40,10 @@ class MainViewController: UIViewController {
         
     }
 
+}
+
+extension MainViewController: UITableViewDelegate {
+    
 }
 
 final class MainViewModel {
@@ -90,6 +91,7 @@ final class ForteeAPI {
         return session.rx.response(request: req).map { _, data in
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
+            decoder.dateDecodingStrategy = .iso8601
             if let decoded = try? decoder.decode(TimeTableResponse.self, from: data) {
                 return decoded.timetable
             } else {
@@ -109,7 +111,7 @@ struct Content: Codable {
     var title: String
     var abstract: String
     var track: Track
-    var startsAt: String
+    var startsAt: Date
     var lengthMin: Int
     var speaker: Speaker?
     var favCount: Int?
