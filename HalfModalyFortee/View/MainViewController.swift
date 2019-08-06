@@ -30,16 +30,42 @@ class MainViewController: UIViewController {
             cell.textLabel?.text = content.title
             cell.detailTextLabel?.text = content.speaker?.name
         }.disposed(by: disposeBag)
-    
+        
+        vm.errorResponse.subscribe(onNext: { (_: Error) in
+            let alert = UIAlertController.init(title: "エラー",
+                                               message: "通信に失敗しました",
+                                               preferredStyle: .alert)
+            let ok = UIAlertAction.init(title: "OK", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        })
+        .disposed(by: disposeBag)
+        
     }
 
 }
 
 final class MainViewModel {
     let timetableResponse: Observable<[Content]>
+    let errorResponse: Observable<Error>
+    
     init() {
-        timetableResponse = ForteeAPI().timeTable()
-        print(timetableResponse)
+        let resp = ForteeAPI().timeTable().materialize().share(replay: 1)
+        
+        timetableResponse = resp.filter { (event: Event<[Content]>) in
+            event.element != nil
+        }
+        .map { (event: Event<[Content]>) in
+            event.element!
+        }
+        
+        errorResponse = resp.filter { (event: Event<[Content]>) in
+            event.error != nil
+        }
+        .map { (event: Event<[Content]>) in
+            event.error!
+        }
+        
     }
 }
 
@@ -61,15 +87,14 @@ final class ForteeAPI {
 //
 //            }
 //        }
-        return session.rx.response(request: req).map { resp, data in
-            if resp.statusCode != 200 {
-                // TODO: エラーハンドリング
-                return []
-            }
+        return session.rx.response(request: req).map { _, data in
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            let decoded = try! decoder.decode(TimeTableResponse.self, from: data)
-            return decoded.timetable
+            if let decoded = try? decoder.decode(TimeTableResponse.self, from: data) {
+                return decoded.timetable
+            } else {
+                throw APIError.server
+            }
         }
     }
 }
