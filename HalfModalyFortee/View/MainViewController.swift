@@ -14,18 +14,40 @@ import Nuke
 class MainViewController: UIViewController {
     @IBOutlet private weak var timeTableView: UITableView!
     let disposeBag = DisposeBag()
+    enum ViewerType {
+        case normal
+    }
+    let viewerType: ViewerType = .normal
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUpUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        bindViewModel()
     }
     
     func setUpUI() {
         let nib = UINib(nibName: "ContentCell", bundle: nil)
         timeTableView.register(nib, forCellReuseIdentifier: "ContentCell")
-        
-        let vm = MainViewModel()
-        vm.timetableResponse.bind(to: timeTableView.rx.items(cellIdentifier: "ContentCell", cellType: ContentCell.self)) { _, content, cell in
+    }
+    
+    func bindViewModel() {
+        let vm = MainViewModel(forteeAPI: ForteeAPI())
+        vm.timetableResponse.map {
+            $0.filter {
+                switch self.viewerType {
+                case .normal:
+                    return $0.type == .talk
+                }
+            }
+        }.bind(to: timeTableView.rx.items(cellIdentifier: "ContentCell", cellType: ContentCell.self)) { _, content, cell in
             cell.set(content: content)
+            print(content.type)
         }.disposed(by: disposeBag)
         
         vm.errorResponse.subscribe(onNext: { (_: Error) in
@@ -37,95 +59,10 @@ class MainViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         })
         .disposed(by: disposeBag)
-        
     }
 
 }
 
 extension MainViewController: UITableViewDelegate {
     
-}
-
-final class MainViewModel {
-    let timetableResponse: Observable<[Content]>
-    let errorResponse: Observable<Error>
-    
-    init() {
-        let resp = ForteeAPI().timeTable().materialize().share(replay: 1)
-        
-        timetableResponse = resp.filter { (event: Event<[Content]>) in
-            event.element != nil
-        }
-        .map { (event: Event<[Content]>) in
-            event.element!
-        }
-        
-        errorResponse = resp.filter { (event: Event<[Content]>) in
-            event.error != nil
-        }
-        .map { (event: Event<[Content]>) in
-            event.error!
-        }
-        
-    }
-}
-
-enum APIError: Error {
-    case server
-}
-
-final class ForteeAPI {
-    let session = URLSession.shared
-    
-    func timeTable() -> Observable<[Content]> {
-        let url = URL(string: "https://fortee.jp/iosdc-japan-2019/api/timetable")!
-        let req = URLRequest(url: url)
-//        AF.request(url).responseData { resp in
-//            if let data = resp.data {
-//                let decoder = JSONDecoder()
-//                decoder.keyDecodingStrategy = .convertFromSnakeCase
-//                let decoded = try! decoder.decode(TimeTableResponse.self, from: data)
-//
-//            }
-//        }
-        return session.rx.response(request: req).map { _, data in
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            decoder.dateDecodingStrategy = .iso8601
-            if let decoded = try? decoder.decode(TimeTableResponse.self, from: data) {
-                return decoded.timetable
-            } else {
-                throw APIError.server
-            }
-        }
-    }
-}
-
-struct TimeTableResponse: Codable {
-    var timetable: [Content]
-}
-
-struct Content: Codable {
-    var type: String
-    var uuid: String
-    var title: String
-    var abstract: String
-    var track: Track
-    var startsAt: Date
-    var lengthMin: Int
-    var speaker: Speaker?
-    var favCount: Int?
-    
-}
-
-struct Track: Codable {
-    var name: String
-    var sort: Int
-}
-
-struct Speaker: Codable {
-    var name: String
-    var kana: String
-    var twitter: String?
-    var avatarUrl: URL?
 }
