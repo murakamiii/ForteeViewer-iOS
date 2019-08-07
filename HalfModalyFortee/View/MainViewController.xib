@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="HalfModalyFortee" customModuleProvider="target">
             <connections>
+                <outlet property="timeTableView" destination="ox3-CW-S8c" id="j34-j3-lKL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="4tq-w0-7Nd"/>
             </connections>
         </placeholder>
@@ -30,13 +31,22 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ox3-CW-S8c">
+                    <rect key="frame" x="0.0" y="62" width="320" height="506"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ox3-CW-S8c" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="42" id="DWP-mK-lVa"/>
                 <constraint firstItem="Giy-EK-EfP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Lgq-1R-Aym"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ox3-CW-S8c" secondAttribute="bottom" id="VoS-Ks-JVP"/>
+                <constraint firstItem="ox3-CW-S8c" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="o40-Bg-2ql"/>
+                <constraint firstItem="ox3-CW-S8c" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="peL-Wa-d5F"/>
                 <constraint firstItem="Giy-EK-EfP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="180" id="zly-zf-kZi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="140.625" y="153.16901408450704"/>
         </view>
     </objects>
 </document>

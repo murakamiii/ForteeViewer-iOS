@@ -18,7 +18,8 @@ target 'HalfModalyFortee' do
  
   target 'HalfModalyForteeTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'RxBlocking', '~> 5.0'
+    pod 'RxTest', '~> 5.o'
   end
 
 #  target 'HalfModalyForteeUITests' do
