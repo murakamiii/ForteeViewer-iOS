@@ -59,10 +59,25 @@ class MainViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         })
         .disposed(by: disposeBag)
+        
+        vm.timeTableGroupByStartAt.subscribe(onNext: { (groups) in
+            print("groups \(groups[1])")
+        }, onError: nil, onCompleted: nil, onDisposed: nil)
+        .disposed(by: disposeBag)
     }
-
 }
 
-extension MainViewController: UITableViewDelegate {
-    
-}
+//
+//extension MainViewController: UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+//
+//    typealias Element = <#type#>
+//
+//
+//}

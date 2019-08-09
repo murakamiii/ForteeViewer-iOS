@@ -14,6 +14,7 @@
 		290AC35922FA481800562C46 /* ForteeAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35822FA481800562C46 /* ForteeAPIProtocol.swift */; };
 		290AC35C22FA48D700562C46 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35B22FA48D700562C46 /* TimeTable.swift */; };
 		290AC35E22FA491000562C46 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35D22FA491000562C46 /* MainViewModel.swift */; };
+		290AC36022FCECDF00562C46 /* ForteeAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35F22FCECDF00562C46 /* ForteeAPIStub.swift */; };
 		29A74ED422F7381A00D338DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A74ED322F7381A00D338DD /* AppDelegate.swift */; };
 		29A74ED622F7381A00D338DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A74ED522F7381A00D338DD /* MainViewController.swift */; };
 		29A74EDB22F7381B00D338DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A74EDA22F7381B00D338DD /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		290AC35822FA481800562C46 /* ForteeAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForteeAPIProtocol.swift; sourceTree = "<group>"; };
 		290AC35B22FA48D700562C46 /* TimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
 		290AC35D22FA491000562C46 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		290AC35F22FCECDF00562C46 /* ForteeAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForteeAPIStub.swift; sourceTree = "<group>"; };
 		29A74ED022F7381A00D338DD /* HalfModalyFortee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalfModalyFortee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A74ED322F7381A00D338DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A74ED522F7381A00D338DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				290AC35822FA481800562C46 /* ForteeAPIProtocol.swift */,
+				290AC35F22FCECDF00562C46 /* ForteeAPIStub.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				29A74ED422F7381A00D338DD /* AppDelegate.swift in Sources */,
 				290AC35922FA481800562C46 /* ForteeAPIProtocol.swift in Sources */,
 				290AC35E22FA491000562C46 /* MainViewModel.swift in Sources */,
+				290AC36022FCECDF00562C46 /* ForteeAPIStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

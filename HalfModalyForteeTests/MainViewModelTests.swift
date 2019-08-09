@@ -27,7 +27,7 @@ class MainViewModelTests: XCTestCase {
     }
     
     func test_timetableResponse() {
-        let vm = MainViewModel(forteeAPI: ForteeAPIStub())
+        let vm = MainViewModel(forteeAPI: ForteeAPIStub(contents: [Content.stubTalk, Content.stubSlot]))
         vm.timetableResponse.subscribe(
             onNext: { contents in
                 XCTAssertEqual(contents, [Content.stubTalk, Content.stubSlot])
@@ -47,6 +47,20 @@ class MainViewModelTests: XCTestCase {
         vm2.errorResponse.subscribe(
             onNext: { error in
                 XCTAssertEqual(error, APIError.server)
+            }
+        ).disposed(by: db)
+    }
+    
+    func test_timeTableGroupByStartAt() {
+        let vm = MainViewModel(forteeAPI: ForteeAPIStub(contents: [Content.stubTalk3,
+                                                                   Content.stubTalk,
+                                                                   Content.stubSlot,
+                                                                   Content.stubTalk2]))
+        vm.timeTableGroupByStartAt.subscribe(
+            onNext: { groups in
+                XCTAssertEqual(groups[0].contents, [Content.stubSlot])
+                XCTAssertEqual(groups[1].contents, [Content.stubTalk, Content.stubTalk2])
+                XCTAssertEqual(groups[2].contents, [Content.stubTalk3])
             }
         ).disposed(by: db)
     }

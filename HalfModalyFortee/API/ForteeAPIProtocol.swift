@@ -19,26 +19,6 @@ protocol ForteeAPIProtocol {
     func timeTable() -> Observable<[Content]>
 }
 
-final class ForteeAPIStub: ForteeAPIProtocol {
-    func timeTable() -> Observable<[Content]> {
-        return Observable.of([Content.stubTalk, Content.stubSlot])
-    }
-}
-
-final class ForteeAPIStubError: ForteeAPIProtocol {
-    let errorValue: APIError
-    init(errorValue: APIError) {
-        self.errorValue = errorValue
-    }
-    
-    func timeTable() -> Observable<[Content]> {
-        return Observable<[Content]>.create { ob in
-            ob.onError(self.errorValue)
-            return Disposables.create()
-        }
-    }
-}
-
 final class ForteeAPI: ForteeAPIProtocol {
     let session = URLSession.shared
     
