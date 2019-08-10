@@ -34,16 +34,18 @@ final class MainViewModel {
     
     var timeTableGroupByStartAt: Observable<[ContentsGroup]> {
         return timetableResponse.map { (contents) -> [ContentsGroup] in
-            contents.reduce(into: [ContentsGroup]()) { (acc, con) in
-                if let idx =  acc.firstIndex(where: { $0.startAt == con.startsAt }) {
-                    acc[idx].contents.append(con)
-                } else {
-                    acc.append(ContentsGroup(startAt: con.startsAt, contents: [con]))
+            contents
+                .filter({ $0.title != "Q & A" })
+                .reduce(into: [ContentsGroup]()) { (acc, con) in
+                    if let idx =  acc.firstIndex(where: { $0.startAt == con.startsAt }) {
+                        acc[idx].contents.append(con)
+                    } else {
+                        acc.append(ContentsGroup(startAt: con.startsAt, contents: [con]))
+                    }
                 }
-            }
-            .sorted(by: { (l, r) -> Bool in
-                l.startAt < r.startAt
-            })
+                .sorted(by: { (l, r) -> Bool in
+                    l.startAt < r.startAt
+                })
         }
     }
 }

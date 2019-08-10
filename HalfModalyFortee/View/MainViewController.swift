@@ -37,24 +37,10 @@ class MainViewController: UIViewController {
     func setUpUI() {
         let nib = UINib(nibName: "ContentCell", bundle: nil)
         timeTableView.register(nib, forCellReuseIdentifier: "ContentCell")
-        timeTableView
-            .rx.setDelegate(self)
-            .disposed(by: disposeBag)
     }
     
     func bindViewModel() {
         let vm = MainViewModel(forteeAPI: ForteeAPI())
-//        vm.timetableResponse.map {
-//            $0.filter {
-//                switch self.viewerType {
-//                case .normal:
-//                    return $0.type == .talk
-//                }
-//            }
-//        }.bind(to: timeTableView.rx.items(cellIdentifier: "ContentCell", cellType: ContentCell.self)) { _, content, cell in
-//            cell.set(content: content)
-//            print(content.type)
-//        }.disposed(by: disposeBag)
         
         vm.errorResponse.subscribe(onNext: { (_: Error) in
             let alert = UIAlertController.init(title: "エラー",
@@ -94,14 +80,5 @@ extension ContentsGroup: SectionModelType {
     
     var items: [Content] {
         return self.contents
-    }
-}
-
-extension MainViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        <#code#>
-//    }
-    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0
     }
 }
