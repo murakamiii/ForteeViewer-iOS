@@ -9,16 +9,19 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import RxDataSources
+import SwiftDate
 import Nuke
 
 class MainViewController: UIViewController {
     @IBOutlet private weak var timeTableView: UITableView!
-    let disposeBag = DisposeBag()
+    
     enum ViewerType {
         case normal
     }
     let viewerType: ViewerType = .normal
-    
+    let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,17 +41,6 @@ class MainViewController: UIViewController {
     
     func bindViewModel() {
         let vm = MainViewModel(forteeAPI: ForteeAPI())
-        vm.timetableResponse.map {
-            $0.filter {
-                switch self.viewerType {
-                case .normal:
-                    return $0.type == .talk
-                }
-            }
-        }.bind(to: timeTableView.rx.items(cellIdentifier: "ContentCell", cellType: ContentCell.self)) { _, content, cell in
-            cell.set(content: content)
-            print(content.type)
-        }.disposed(by: disposeBag)
         
         vm.errorResponse.subscribe(onNext: { (_: Error) in
             let alert = UIAlertController.init(title: "エラー",
@@ -59,10 +51,34 @@ class MainViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         })
         .disposed(by: disposeBag)
+        
+        vm.timeTableGroupByStartAt.subscribe(onNext: { (groups) in
+            print("groups \(groups[1])")
+        }, onError: nil, onCompleted: nil, onDisposed: nil)
+        .disposed(by: disposeBag)
+        
+        let ds = RxTableViewSectionedReloadDataSource<ContentsGroup>(configureCell: { ds, table, indexPath, item in
+                let cell = table.dequeueReusableCell(withIdentifier: "ContentCell", for: indexPath) as! ContentCell
+                cell.set(content: item)
+                return cell
+        }, titleForHeaderInSection: { ds, idx in
+            let d = ds.sectionModels[idx].startAt.convertTo(region: Region.current)
+            return "\(d.month)/\(d.day) \(d.hour):\(d.minute)~"
+        })
+        vm.timeTableGroupByStartAt
+            .bind(to: timeTableView.rx.items(dataSource: ds))
+            .disposed(by: disposeBag)
     }
-
 }
 
-extension MainViewController: UITableViewDelegate {
+extension ContentsGroup: SectionModelType {
+    typealias Item = Content
+    init(original: ContentsGroup, items: [ContentsGroup.Item]) {
+        self = original
+        self.contents = items
+    }
     
+    var items: [Content] {
+        return self.contents
+    }
 }
