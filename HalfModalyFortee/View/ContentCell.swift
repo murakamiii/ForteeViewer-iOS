@@ -22,6 +22,9 @@ class ContentCell: UITableViewCell {
     }
     
     func set(content: Content) {
+        speakerNameLabel.text = nil
+        speakerIconImageView.image = nil
+        
         titleLabel.text = content.title
         if let speaker = content.speaker {
             if let url = speaker.avatarUrl {

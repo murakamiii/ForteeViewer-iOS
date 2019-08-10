@@ -11,7 +11,7 @@
 		290AC35222F7DFFA00562C46 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290AC35122F7DFFA00562C46 /* ContentCell.xib */; };
 		290AC35422F7E2F600562C46 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35322F7E2F600562C46 /* ContentCell.swift */; };
 		290AC35622FA438800562C46 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35522FA438800562C46 /* MainViewModelTests.swift */; };
-		290AC35922FA481800562C46 /* ForteeAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35822FA481800562C46 /* ForteeAPIProtocol.swift */; };
+		290AC35922FA481800562C46 /* ForteeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35822FA481800562C46 /* ForteeAPI.swift */; };
 		290AC35C22FA48D700562C46 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35B22FA48D700562C46 /* TimeTable.swift */; };
 		290AC35E22FA491000562C46 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35D22FA491000562C46 /* MainViewModel.swift */; };
 		290AC36022FCECDF00562C46 /* ForteeAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35F22FCECDF00562C46 /* ForteeAPIStub.swift */; };
@@ -48,7 +48,7 @@
 		290AC35122F7DFFA00562C46 /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
 		290AC35322F7E2F600562C46 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		290AC35522FA438800562C46 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
-		290AC35822FA481800562C46 /* ForteeAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForteeAPIProtocol.swift; sourceTree = "<group>"; };
+		290AC35822FA481800562C46 /* ForteeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForteeAPI.swift; sourceTree = "<group>"; };
 		290AC35B22FA48D700562C46 /* TimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
 		290AC35D22FA491000562C46 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		290AC35F22FCECDF00562C46 /* ForteeAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForteeAPIStub.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		290AC35722FA47F600562C46 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				290AC35822FA481800562C46 /* ForteeAPIProtocol.swift */,
+				290AC35822FA481800562C46 /* ForteeAPI.swift */,
 				290AC35F22FCECDF00562C46 /* ForteeAPIStub.swift */,
 			);
 			path = API;
@@ -439,7 +439,7 @@
 				290AC35C22FA48D700562C46 /* TimeTable.swift in Sources */,
 				29A74ED622F7381A00D338DD /* MainViewController.swift in Sources */,
 				29A74ED422F7381A00D338DD /* AppDelegate.swift in Sources */,
-				290AC35922FA481800562C46 /* ForteeAPIProtocol.swift in Sources */,
+				290AC35922FA481800562C46 /* ForteeAPI.swift in Sources */,
 				290AC35E22FA491000562C46 /* MainViewModel.swift in Sources */,
 				290AC36022FCECDF00562C46 /* ForteeAPIStub.swift in Sources */,
 			);

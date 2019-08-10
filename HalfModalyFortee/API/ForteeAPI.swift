@@ -1,5 +1,5 @@
 //
-//  ForteeAPIProtocol.swift
+//  ForteeAPI.swift
 //  HalfModalyFortee
 //
 //  Created by murakami Taichi on 2019/08/07.

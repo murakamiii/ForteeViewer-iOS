@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.0.0-beta.7)
+  - Differentiator (4.0.1)
   - LicensePlist (2.5.0)
   - Nuke (8.0.1)
   - R.swift (5.1.0.alpha.4):
@@ -11,6 +12,10 @@ PODS:
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
@@ -28,8 +33,9 @@ DEPENDENCIES:
   - ReachabilitySwift (= 5.0.0-beta1)
   - RxBlocking (~> 5.0)
   - RxCocoa (~> 5.0)
+  - RxDataSources (~> 4.0)
   - RxSwift (~> 5.0)
-  - RxTest (~> 5.o)
+  - RxTest (~> 5.0)
   - SVProgressHUD (~> 2.2)
   - SwiftDate (~> 6.0)
   - SwiftLint
@@ -37,6 +43,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Differentiator
     - LicensePlist
     - Nuke
     - R.swift
@@ -44,6 +51,7 @@ SPEC REPOS:
     - ReachabilitySwift
     - RxBlocking
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - RxTest
@@ -53,6 +61,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: bd07938ceecad59d2492aeecb1f785a8f2721160
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   LicensePlist: e5f8f2e3465620e53ec4c669955a5a7d0692b9cb
   Nuke: e6a65472f59c1bfe779cb495760951f0121ef7c0
   R.swift: 28fd04ea6eef3e5f494c963e367e4704293036c7
@@ -60,6 +69,7 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 93a5956ef3f076d7e24bc65bfb1c5042e69b7276
   RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
@@ -67,6 +77,6 @@ SPEC CHECKSUMS:
   SwiftDate: 8d4f14bf1ef68e95094511504856547bf9e3e1a6
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: 853e1fad13841e049a2ee73c9725aa3a3d21a71c
+PODFILE CHECKSUM: 50a97006662a5765282360efe3c3827a8fe5999d
 
 COCOAPODS: 1.7.5

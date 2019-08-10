@@ -15,7 +15,8 @@ target 'HalfModalyFortee' do
   pod 'LicensePlist'  
   pod 'SVProgressHUD', '~> 2.2'
   pod 'SwiftLint'
- 
+  pod 'RxDataSources', '~> 4.0'
+
   target 'HalfModalyForteeTests' do
     inherit! :search_paths
     pod 'RxBlocking', '~> 5.0'
