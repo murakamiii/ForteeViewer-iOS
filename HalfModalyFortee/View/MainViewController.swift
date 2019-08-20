@@ -63,7 +63,7 @@ class MainViewController: UIViewController {
                 return cell
         }, titleForHeaderInSection: { ds, idx in
             let d = ds.sectionModels[idx].startAt.convertTo(region: Region.current)
-            return "\(d.month)/\(d.day) \(d.hour):\(d.minute)~"
+            return "\(d.month)/\(d.day) \(d.hour):\(String(format: "%02d", d.minute))~"
         })
         vm.timeTableGroupByStartAt
             .bind(to: timeTableView.rx.items(dataSource: ds))
