@@ -12,6 +12,7 @@ import RxSwift
 import RxDataSources
 import SwiftDate
 import Nuke
+import FloatingPanel
 
 class MainViewController: UIViewController {
     @IBOutlet private weak var timeTableView: UITableView!
@@ -39,6 +40,10 @@ class MainViewController: UIViewController {
         timeTableView.register(nib, forCellReuseIdentifier: "ContentCell")
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
     func bindViewModel() {
         let vm = MainViewModel(forteeAPI: ForteeAPI())
         
@@ -52,11 +57,6 @@ class MainViewController: UIViewController {
         })
         .disposed(by: disposeBag)
         
-        vm.timeTableGroupByStartAt.subscribe(onNext: { (groups) in
-            print("groups \(groups[1])")
-        }, onError: nil, onCompleted: nil, onDisposed: nil)
-        .disposed(by: disposeBag)
-        
         let ds = RxTableViewSectionedReloadDataSource<ContentsGroup>(configureCell: { ds, table, indexPath, item in
                 let cell = table.dequeueReusableCell(withIdentifier: "ContentCell", for: indexPath) as! ContentCell
                 cell.set(content: item)
@@ -65,9 +65,49 @@ class MainViewController: UIViewController {
             let d = ds.sectionModels[idx].startAt.convertTo(region: Region.current)
             return "\(d.month)/\(d.day) \(d.hour):\(String(format: "%02d", d.minute))~"
         })
+        
         vm.timeTableGroupByStartAt
             .bind(to: timeTableView.rx.items(dataSource: ds))
             .disposed(by: disposeBag)
+        
+        timeTableView.rx.itemSelected.map { indexPath in
+             ds[indexPath]
+        }.subscribe(onNext: { content in
+            self.presentFloatingpanel(c: content)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func presentFloatingpanel(c: Content) {
+        let cvc = ContentDetailViewController.loadFromNib()
+        cvc.setContent(content: c)
+        let fpc = FloatingPanelController(delegate: self)
+        fpc.set(contentViewController: cvc)
+        fpc.surfaceView.cornerRadius = 24.0
+        fpc.isRemovalInteractionEnabled = true
+        self.present(fpc, animated: true, completion: nil)
+    }
+}
+
+extension MainViewController: FloatingPanelControllerDelegate {
+    func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
+        return ContentFloatingPanelLayout()
+    }
+}
+
+class ContentFloatingPanelLayout: FloatingPanelLayout {
+    var initialPosition: FloatingPanelPosition {
+        return .half
+    }
+    
+    func insetFor(position: FloatingPanelPosition) -> CGFloat? {
+        switch position {
+        case .full:
+            return 16.0
+        case .half:
+            return 216.0
+        default:
+            return nil
+        }
     }
 }
 
