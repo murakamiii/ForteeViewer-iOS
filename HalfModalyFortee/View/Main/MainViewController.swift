@@ -84,7 +84,13 @@ class MainViewController: UIViewController {
         fpc.set(contentViewController: cvc)
         fpc.surfaceView.cornerRadius = 24.0
         fpc.isRemovalInteractionEnabled = true
-        self.present(fpc, animated: true, completion: nil)
+        if let preFpc = self.presentedViewController as? FloatingPanelController {
+            preFpc.dismiss(animated: true) {
+                self.present(fpc, animated: true, completion: nil)
+            }
+        } else {
+            self.present(fpc, animated: true, completion: nil)
+        }
     }
 }
 
