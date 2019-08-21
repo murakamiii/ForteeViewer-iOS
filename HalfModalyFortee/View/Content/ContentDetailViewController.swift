@@ -29,7 +29,7 @@ class ContentDetailViewController: UIViewController {
     }
 
     func setupUI() {
-        trackLabel.text = "Track: \(content.track.name)"
+        trackLabel.text = content.track.name
         titleLabel.text = content.title
         descriptionLabel.text = content.abstract
     }

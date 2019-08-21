@@ -25,17 +25,17 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track: A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsU-Gv-ViI">
-                    <rect key="frame" x="32" y="60" width="62.5" height="14"/>
-                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                    <rect key="frame" x="24" y="60" width="57" height="14"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:00 ~ 14:00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ro-k0-40S">
-                    <rect key="frame" x="254" y="60" width="128" height="14"/>
+                    <rect key="frame" x="262" y="60" width="128" height="14"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="128" id="pSd-K3-qW4"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -45,24 +45,37 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descriptions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZd-1t-KcU">
-                    <rect key="frame" x="32" y="154" width="350" height="16"/>
-                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4b-Yi-x6p">
+                    <rect key="frame" x="32" y="154" width="350" height="676"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descriptions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZd-1t-KcU">
+                            <rect key="frame" x="0.0" y="0.0" width="350" height="16"/>
+                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="LZd-1t-KcU" firstAttribute="leading" secondItem="H4b-Yi-x6p" secondAttribute="leading" id="0HF-OC-07J"/>
+                        <constraint firstItem="LZd-1t-KcU" firstAttribute="width" secondItem="H4b-Yi-x6p" secondAttribute="width" id="BPX-JW-vwq"/>
+                        <constraint firstItem="LZd-1t-KcU" firstAttribute="top" secondItem="H4b-Yi-x6p" secondAttribute="top" id="Qrh-VC-QJh"/>
+                        <constraint firstAttribute="bottom" secondItem="LZd-1t-KcU" secondAttribute="bottom" id="Uug-Rz-RPl"/>
+                        <constraint firstAttribute="trailing" secondItem="LZd-1t-KcU" secondAttribute="trailing" id="fMF-C9-ToE"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="54M-sr-DAH" firstAttribute="trailing" secondItem="LZd-1t-KcU" secondAttribute="trailing" constant="32" id="N88-ge-7qF"/>
-                <constraint firstItem="fsU-Gv-ViI" firstAttribute="leading" secondItem="54M-sr-DAH" secondAttribute="leading" constant="32" id="QYY-bf-ITx"/>
-                <constraint firstItem="LZd-1t-KcU" firstAttribute="leading" secondItem="54M-sr-DAH" secondAttribute="leading" constant="32" id="WNg-GR-Uhg"/>
+                <constraint firstItem="54M-sr-DAH" firstAttribute="trailing" secondItem="H4b-Yi-x6p" secondAttribute="trailing" constant="32" id="3UH-bI-bRY"/>
+                <constraint firstItem="H4b-Yi-x6p" firstAttribute="top" secondItem="NZx-9A-G16" secondAttribute="bottom" constant="32" id="7Uf-9Y-yYV"/>
+                <constraint firstItem="54M-sr-DAH" firstAttribute="bottom" secondItem="H4b-Yi-x6p" secondAttribute="bottom" constant="32" id="Cd6-8Z-Nwm"/>
+                <constraint firstItem="H4b-Yi-x6p" firstAttribute="leading" secondItem="54M-sr-DAH" secondAttribute="leading" constant="32" id="EaL-Or-g57"/>
+                <constraint firstItem="fsU-Gv-ViI" firstAttribute="leading" secondItem="54M-sr-DAH" secondAttribute="leading" constant="24" id="QYY-bf-ITx"/>
                 <constraint firstItem="54M-sr-DAH" firstAttribute="trailing" secondItem="NZx-9A-G16" secondAttribute="trailing" constant="32" id="bfo-kO-8vd"/>
                 <constraint firstItem="NZx-9A-G16" firstAttribute="leading" secondItem="54M-sr-DAH" secondAttribute="leading" constant="32" id="cYX-BH-AI1"/>
-                <constraint firstItem="54M-sr-DAH" firstAttribute="trailing" secondItem="6Ro-k0-40S" secondAttribute="trailing" constant="32" id="d97-Pv-6h6"/>
+                <constraint firstItem="54M-sr-DAH" firstAttribute="trailing" secondItem="6Ro-k0-40S" secondAttribute="trailing" constant="24" id="d97-Pv-6h6"/>
                 <constraint firstItem="6Ro-k0-40S" firstAttribute="top" secondItem="54M-sr-DAH" secondAttribute="top" constant="16" id="faD-Nx-chO"/>
                 <constraint firstItem="NZx-9A-G16" firstAttribute="top" secondItem="fsU-Gv-ViI" secondAttribute="bottom" constant="32" id="hZD-S5-xd4"/>
-                <constraint firstItem="LZd-1t-KcU" firstAttribute="top" secondItem="NZx-9A-G16" secondAttribute="bottom" constant="32" id="jyQ-B7-Mhj"/>
                 <constraint firstItem="fsU-Gv-ViI" firstAttribute="top" secondItem="54M-sr-DAH" secondAttribute="top" constant="16" id="kdq-aA-fSc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="54M-sr-DAH"/>

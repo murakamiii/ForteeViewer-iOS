@@ -80,10 +80,12 @@ class MainViewController: UIViewController {
     private func presentFloatingpanel(c: Content) {
         let cvc = ContentDetailViewController.loadFromNib()
         cvc.setContent(content: c)
+        
         let fpc = FloatingPanelController(delegate: self)
         fpc.set(contentViewController: cvc)
         fpc.surfaceView.cornerRadius = 24.0
         fpc.isRemovalInteractionEnabled = true
+
         if let preFpc = self.presentedViewController as? FloatingPanelController {
             preFpc.dismiss(animated: true) {
                 self.present(fpc, animated: true, completion: nil)
