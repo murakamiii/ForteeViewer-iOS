@@ -58,9 +58,11 @@ class MainViewController: UIViewController {
         .disposed(by: disposeBag)
         
         let ds = RxTableViewSectionedReloadDataSource<ContentsGroup>(configureCell: { ds, table, indexPath, item in
-                let cell = table.dequeueReusableCell(withIdentifier: "ContentCell", for: indexPath) as! ContentCell
-                cell.set(content: item)
-                return cell
+            let cell = table.dequeueReusableCell(withIdentifier: "ContentCell", for: indexPath) as! ContentCell
+            cell.set(content: item)
+            cell.selectionStyle = .none
+            
+            return cell
         }, titleForHeaderInSection: { ds, idx in
             let d = ds.sectionModels[idx].startAt.convertTo(region: Region.current)
             return "\(d.month)/\(d.day) \(d.hour):\(String(format: "%02d", d.minute))~"

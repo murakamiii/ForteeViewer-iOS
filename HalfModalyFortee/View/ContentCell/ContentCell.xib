@@ -42,18 +42,20 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Um7-P9-Mzg" secondAttribute="bottom" constant="12" id="6tz-sk-g1H"/>
+                    <constraint firstAttribute="bottom" secondItem="Um7-P9-Mzg" secondAttribute="bottom" priority="750" constant="12" id="6tz-sk-g1H"/>
                     <constraint firstAttribute="trailing" secondItem="wJf-K5-AAO" secondAttribute="trailing" constant="16" id="A9r-4x-jYu"/>
                     <constraint firstAttribute="trailing" secondItem="sNH-Rr-CMK" secondAttribute="trailing" constant="16" id="Fi2-20-fTS"/>
                     <constraint firstItem="wJf-K5-AAO" firstAttribute="leading" secondItem="Um7-P9-Mzg" secondAttribute="trailing" constant="16" id="Uyr-bF-YAo"/>
+                    <constraint firstAttribute="bottom" secondItem="sNH-Rr-CMK" secondAttribute="bottom" priority="750" constant="16" id="gle-aV-zVO"/>
                     <constraint firstItem="Um7-P9-Mzg" firstAttribute="leading" secondItem="sNH-Rr-CMK" secondAttribute="leading" id="j5d-3V-osd"/>
                     <constraint firstItem="sNH-Rr-CMK" firstAttribute="top" secondItem="Y1j-eV-sqy" secondAttribute="top" constant="16" id="ni3-El-3c9"/>
                     <constraint firstItem="sNH-Rr-CMK" firstAttribute="leading" secondItem="Y1j-eV-sqy" secondAttribute="leading" constant="16" id="rNJ-c7-EGs"/>
-                    <constraint firstItem="Um7-P9-Mzg" firstAttribute="top" secondItem="sNH-Rr-CMK" secondAttribute="bottom" constant="20" id="sVl-Dw-Cr8"/>
+                    <constraint firstItem="Um7-P9-Mzg" firstAttribute="top" secondItem="sNH-Rr-CMK" secondAttribute="bottom" priority="750" constant="20" id="sVl-Dw-Cr8"/>
                     <constraint firstItem="wJf-K5-AAO" firstAttribute="centerY" secondItem="Um7-P9-Mzg" secondAttribute="centerY" id="vOh-tM-1x7"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="nonSpeakerConstraint" destination="gle-aV-zVO" id="PI3-Cx-uHV"/>
                 <outlet property="speakerIconImageView" destination="Um7-P9-Mzg" id="b3l-dZ-Yn4"/>
                 <outlet property="speakerNameLabel" destination="wJf-K5-AAO" id="jru-Nt-077"/>
                 <outlet property="titleLabel" destination="sNH-Rr-CMK" id="5nt-hz-8cP"/>
