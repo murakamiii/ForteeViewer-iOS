@@ -15,6 +15,8 @@
 		290AC35C22FA48D700562C46 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35B22FA48D700562C46 /* TimeTable.swift */; };
 		290AC35E22FA491000562C46 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35D22FA491000562C46 /* MainViewModel.swift */; };
 		290AC36022FCECDF00562C46 /* ForteeAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35F22FCECDF00562C46 /* ForteeAPIStub.swift */; };
+		2919D036230BC168008F8A7F /* ContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2919D035230BC168008F8A7F /* ContentDetailViewController.swift */; };
+		2919D038230C45AF008F8A7F /* ContentDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2919D037230C45AF008F8A7F /* ContentDetailViewController.xib */; };
 		29A74ED422F7381A00D338DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A74ED322F7381A00D338DD /* AppDelegate.swift */; };
 		29A74ED622F7381A00D338DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A74ED522F7381A00D338DD /* MainViewController.swift */; };
 		29A74EDB22F7381B00D338DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A74EDA22F7381B00D338DD /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		290AC35B22FA48D700562C46 /* TimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
 		290AC35D22FA491000562C46 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		290AC35F22FCECDF00562C46 /* ForteeAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForteeAPIStub.swift; sourceTree = "<group>"; };
+		2919D035230BC168008F8A7F /* ContentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailViewController.swift; sourceTree = "<group>"; };
+		2919D037230C45AF008F8A7F /* ContentDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentDetailViewController.xib; sourceTree = "<group>"; };
 		29A74ED022F7381A00D338DD /* HalfModalyFortee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalfModalyFortee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A74ED322F7381A00D338DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29A74ED522F7381A00D338DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +117,34 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		2919D039230C4690008F8A7F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				29A74F0222F747B400D338DD /* MainViewController.xib */,
+				29A74ED522F7381A00D338DD /* MainViewController.swift */,
+				290AC35D22FA491000562C46 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2919D03A230C46A4008F8A7F /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				2919D037230C45AF008F8A7F /* ContentDetailViewController.xib */,
+				2919D035230BC168008F8A7F /* ContentDetailViewController.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		2919D03B230C46BA008F8A7F /* ContentCell */ = {
+			isa = PBXGroup;
+			children = (
+				290AC35122F7DFFA00562C46 /* ContentCell.xib */,
+				290AC35322F7E2F600562C46 /* ContentCell.swift */,
+			);
+			path = ContentCell;
+			sourceTree = "<group>";
+		};
 		29A74EC722F7381A00D338DD = {
 			isa = PBXGroup;
 			children = (
@@ -170,11 +202,9 @@
 		29A74F0122F7473F00D338DD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				29A74F0222F747B400D338DD /* MainViewController.xib */,
-				29A74ED522F7381A00D338DD /* MainViewController.swift */,
-				290AC35D22FA491000562C46 /* MainViewModel.swift */,
-				290AC35122F7DFFA00562C46 /* ContentCell.xib */,
-				290AC35322F7E2F600562C46 /* ContentCell.swift */,
+				2919D039230C4690008F8A7F /* Main */,
+				2919D03A230C46A4008F8A7F /* Content */,
+				2919D03B230C46BA008F8A7F /* ContentCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +342,7 @@
 				29A74F0322F747B400D338DD /* MainViewController.xib in Resources */,
 				29A74EDB22F7381B00D338DD /* Assets.xcassets in Resources */,
 				290AC35222F7DFFA00562C46 /* ContentCell.xib in Resources */,
+				2919D038230C45AF008F8A7F /* ContentDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2919D036230BC168008F8A7F /* ContentDetailViewController.swift in Sources */,
 				290AC35422F7E2F600562C46 /* ContentCell.swift in Sources */,
 				290AC35C22FA48D700562C46 /* TimeTable.swift in Sources */,
 				29A74ED622F7381A00D338DD /* MainViewController.swift in Sources */,

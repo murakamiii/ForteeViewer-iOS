@@ -14,6 +14,7 @@ class ContentCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var speakerIconImageView: UIImageView!
     @IBOutlet private weak var speakerNameLabel: UILabel!
+    @IBOutlet private weak var nonSpeakerConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,15 +23,20 @@ class ContentCell: UITableViewCell {
     }
     
     func set(content: Content) {
-        speakerNameLabel.text = nil
-        speakerIconImageView.image = nil
         
         titleLabel.text = content.title
         if let speaker = content.speaker {
             if let url = speaker.avatarUrl {
+                speakerIconImageView.isHidden = false
                 Nuke.loadImage(with: url, into: speakerIconImageView)
             }
+            speakerNameLabel.isHidden = false
             speakerNameLabel.text = speaker.name
+            nonSpeakerConstraint.priority = .defaultLow
+        } else {
+            speakerNameLabel.isHidden = true
+            speakerIconImageView.isHidden = true
+            nonSpeakerConstraint.priority = .init(999)
         }
     }
 }

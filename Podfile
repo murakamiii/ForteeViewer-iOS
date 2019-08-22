@@ -16,6 +16,7 @@ target 'HalfModalyFortee' do
   pod 'SVProgressHUD', '~> 2.2'
   pod 'SwiftLint'
   pod 'RxDataSources', '~> 4.0'
+  pod 'FloatingPanel'
 
   target 'HalfModalyForteeTests' do
     inherit! :search_paths
