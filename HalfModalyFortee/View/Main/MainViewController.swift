@@ -114,7 +114,7 @@ class ContentFloatingPanelLayout: FloatingPanelLayout {
         case .full:
             return 16.0
         case .half:
-            return 216.0
+            return 184.0
         default:
             return nil
         }
