@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		051C997AE01F8410753F32A4 /* Pods_HalfModalyForteeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDAC8C5A9E1A7A1AA2AD6B0 /* Pods_HalfModalyForteeTests.framework */; };
+		2907E75D2316B07F00F38BF8 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2907E75C2316B07F00F38BF8 /* NSAttributedStringExtension.swift */; };
 		290AC35222F7DFFA00562C46 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290AC35122F7DFFA00562C46 /* ContentCell.xib */; };
 		290AC35422F7E2F600562C46 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35322F7E2F600562C46 /* ContentCell.swift */; };
 		290AC35622FA438800562C46 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290AC35522FA438800562C46 /* MainViewModelTests.swift */; };
@@ -47,6 +48,7 @@
 		16CF5931D8B5EDE3A599CF1B /* Pods-HalfModalyFortee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyFortee.debug.xcconfig"; path = "Target Support Files/Pods-HalfModalyFortee/Pods-HalfModalyFortee.debug.xcconfig"; sourceTree = "<group>"; };
 		229942DB78E75D29DD392BDE /* Pods-HalfModalyFortee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyFortee.release.xcconfig"; path = "Target Support Files/Pods-HalfModalyFortee/Pods-HalfModalyFortee.release.xcconfig"; sourceTree = "<group>"; };
 		280995817328E069C2693776 /* Pods-HalfModalyForteeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfModalyForteeTests.release.xcconfig"; path = "Target Support Files/Pods-HalfModalyForteeTests/Pods-HalfModalyForteeTests.release.xcconfig"; sourceTree = "<group>"; };
+		2907E75C2316B07F00F38BF8 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		290AC35122F7DFFA00562C46 /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
 		290AC35322F7E2F600562C46 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		290AC35522FA438800562C46 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2907E75B2316B04300F38BF8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2907E75C2316B07F00F38BF8 /* NSAttributedStringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		290AC35722FA47F600562C46 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				29A74ED322F7381A00D338DD /* AppDelegate.swift */,
+				2907E75B2316B04300F38BF8 /* Extensions */,
 				290AC35A22FA489700562C46 /* Entity */,
 				290AC35722FA47F600562C46 /* API */,
 				29A74F0122F7473F00D338DD /* View */,
@@ -472,6 +483,7 @@
 				29A74ED622F7381A00D338DD /* MainViewController.swift in Sources */,
 				29A74ED422F7381A00D338DD /* AppDelegate.swift in Sources */,
 				290AC35922FA481800562C46 /* ForteeAPI.swift in Sources */,
+				2907E75D2316B07F00F38BF8 /* NSAttributedStringExtension.swift in Sources */,
 				290AC35E22FA491000562C46 /* MainViewModel.swift in Sources */,
 				290AC36022FCECDF00562C46 /* ForteeAPIStub.swift in Sources */,
 			);

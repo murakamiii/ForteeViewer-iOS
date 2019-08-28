@@ -31,7 +31,7 @@ class ContentDetailViewController: UIViewController {
     func setupUI() {
         trackLabel.text = content.track.name
         titleLabel.text = content.title
-        descriptionLabel.text = content.abstract
+        descriptionLabel.attributedText = NSAttributedString.init(string: content.abstract, lineSpacing: 6.0, alignment: .left)
     }
 }
 
